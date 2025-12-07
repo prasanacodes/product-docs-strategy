@@ -1,116 +1,52 @@
-### Marp Presentation Code
+# Product Documentation Strategy Presentation
 
-````markdown
----
-marp: true
-theme: gaia
-paginate: true
-backgroundColor: #ffffff
-author: "Technical Writing Team"
-math: mathjax
-style: |
-  /* Custom Theme Specification */
-  section {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    padding: 70px;
-  }
-  /* Brand Colors */
-  h1 {
-    color: #2563eb; /* Royal Blue */
-    font-size: 60px;
-  }
-  h2 {
-    color: #1e40af;
-    border-bottom: 2px solid #cbd5e1;
-  }
-  /* Code Block Styling */
-  code {
-    background: #f1f5f9;
-    color: #d946ef;
-  }
-  /* Custom Footer placement */
-  footer {
-    position: absolute;
-    bottom: 20px;
-    left: 70px;
-    font-size: 18px;
-    color: #64748b;
-  }
----
+This repository contains a technical presentation created using [Marp](https://marp.app/), demonstrating a "Docs as Code" approach to product documentation. It serves as both a strategic guide for documentation teams and a technical showcase of Marp's capabilities.
 
-# Product Documentation Strategy
-## Moving to Docs-as-Code
+## Overview
 
-**Prepared by:** Technical Writing Lead
-**Contact:** 22f1001255@ds.study.iitm.ac.in
+The presentation outlines strategies for modernizing documentation workflows, emphasizing:
+- **Version Control**: Managing documentation with Git to enable collaboration.
+- **Portability**: Using Markdown as a single source of truth for HTML, PDF, and Slide outputs.
+- **Maintainability**: Modular architecture ensuring scalability and easy updates.
 
----
+## Author Information
 
-# Why Marp?
+- **Contact Email**: 22f1001255@ds.study.iitm.ac.in
 
-As technical writers, we need tools that fit our existing engineering workflows.
+## Technical Features Demonstrated
 
-* **Version Control:** Text-based files (`.md`) are easily diffable in Git.
-* **Maintainability:** Content separates from design.
-* **Portability:** Export to HTML, PDF, or PPTX from a single source.
-* **CI/CD Friendly:** Can be built automatically via GitHub Actions.
+This project showcases several advanced Marp and Markdown features customized for technical presentations:
 
----
+* **Custom Theming**: A bespoke "TechDoc" theme using CSS variables for consistent typography (Inter/Fira Code) and color palettes.
+* **Algorithmic Notation**: Mathematical equations rendering for time complexity analysis ($O(n log n)$).
+* **Visual Layouts**: usage of grid layouts, tiled content, and full-bleed background images for architectural diagrams.
+* **Marp Directives**: Implementation of page numbering, pagination, and header/footer customization.
 
-# Backend Optimization Logic
+## Getting Started
 
-We are updating the sorting algorithm for the user dashboard. The complexity has been reduced significantly.
+### Prerequisites
 
-**Previous Complexity:** $O(n^2)$
-**Current Complexity:** $O(n \log n)$
+To edit or rebuild this presentation, you will need:
+- [VS Code](https://code.visualstudio.com/)
+- [Marp for VS Code Extension](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
 
-The core efficiency is defined by the following summation:
+### Viewing the Slides
 
-$$
-T(n) = \sum_{i=1}^{\log n} 2^i \cdot \frac{n}{2^i} = n \log n
-$$
+**Option 1: HTML (Recommended)**
+Open the `product_documentation_marp.html` file in any modern web browser.
 
----
+**Option 2: VS Code Preview**
+1.  Clone this repository.
+2.  Open the Markdown source file in VS Code.
+3.  Click the **Marp icon** in the editor toolbar to toggle the preview.
 
-![bg right:40%](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80)
+### Building/Exporting
 
-# Infrastructure Overview
+To export the presentation to different formats:
+1.  Open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+2.  Type `Marp: Export Slide Deck`.
+3.  Select your desired output format (HTML, PDF, PPTX, or PNG).
 
-This slide utilizes the **split background** directive.
+## License
 
-* **Left Side:** Content and bullet points.
-* **Right Side:** Visual representation of our coding environment.
-
-This layout is ideal for showcasing code snippets alongside their visual output or architectural diagrams.
-
----
-
-# Custom Directives & Code
-
-We use scoped directives to change specific slides without affecting the global theme.
-
-```javascript
-// Example of the API endpoint we are documenting
-const getProductData = async (id) => {
-  try {
-    const response = await api.get(`/products/${id}`);
-    return response.data;
-  } catch (error) {
-    console.error("Documentation needed for error: ", error);
-  }
-};
-````
-
-> "Good documentation is like a love letter that you write to your future self."
-
------
-
-# Thank You
-
-**Questions?**
-
-Email: 22f1001255@ds.study.iitm.ac.in
-GitHub: @technical-writer-team
-
-```
+This project is available for use under the MIT License.
