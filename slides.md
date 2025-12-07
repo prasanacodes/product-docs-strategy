@@ -99,3 +99,5 @@ Example directive:
 ```yaml
 paginate: true
 footer: 22f1001255@ds.study.iitm.ac.in
+
+---
