@@ -1,103 +1,110 @@
+### Marp Presentation Code
+
+````markdown
 ---
 marp: true
-title: Product Documentation with Marp
-author: Technical Documentation Team
-footer: 22f1001255@ds.study.iitm.ac.in
+theme: default
 paginate: true
-theme: product-docs
+backgroundColor: #f8f9fa
+author: "Technical Writing Team"
+math: mathjax
+style: |
+  /* Custom Theme Specification */
+  section {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 60px;
+    font-size: 28px;
+  }
+  h1 {
+    color: #0d6efd;
+    font-size: 60px;
+  }
+  h2 {
+    color: #495057;
+    border-bottom: 3px solid #dee2e6;
+  }
+  code {
+    background-color: #e9ecef;
+    color: #d63384;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+  }
 ---
 
-<!-- =========================
-     Custom Theme Definition
-     ========================= -->
-<style>
-section {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #0f172a;
-  color: #e5e7eb;
-}
+# Product Documentation Strategy
+## Q4 Engineering Roadmap
 
-h1, h2 {
-  color: #38bdf8;
-}
-
-code {
-  background-color: #020617;
-  color: #67e8f9;
-  padding: 4px 6px;
-  border-radius: 6px;
-}
-
-footer {
-  color: #94a3b8;
-  font-size: 0.7em;
-}
-</style>
-
-# Product Documentation with Marp
-
-**Maintainable • Version Controlled • Multi-Format**
-
-📧 **22f1001255@ds.study.iitm.ac.in**
+**Presenter:** Tech Writing Lead
+**Email:** 22f1001255@ds.study.iitm.ac.in
 
 ---
 
-## Why Marp for Product Docs?
+# Overview of Directives
 
-- Markdown-based documentation
-- Easy Git versioning
-- Export to **PDF | PPTX | HTML**
-- Developer-friendly workflow
+This presentation uses specific **Marp Directives** to alter layouts on a per-slide basis.
 
----
+* **Global Directives:** Defined in the YAML header (e.g., `paginate: true`).
+* **Local Directives:** Defined in HTML comments (like the footer below).
 
----
-backgroundImage: "https://images.unsplash.com/photo-1518770660439-4636190af475"
-backgroundOpacity: 0.3
-![bg]([background.jpg](https://images.unsplash.com/photo-1518770660439-4636190af475))
----
-
-# Documentation That Scales
-
-### Visual + Technical Clarity
-
-- Architecture discussions
-- Product overviews
-- Developer onboarding
+> Directives allows us to maintain a clean source file while producing rich visual output.
 
 ---
 
-## Algorithmic Complexity Example
+# Algorithmic Complexity
 
-### Time Complexity
+We adhere to strict performance standards. The documentation must reflect the algorithmic efficiency of our parser.
 
-\[
-T(n) = O(n \log n)
-\]
+**Efficiency Formula:**
 
-### Space Complexity
+$$
+T(n) = \sum_{k=0}^{n-1} (3k^2 + 2k) = O(n^3)
+$$
 
-\[
-S(n) = O(n)
-\]
-
-Used for:
-- API documentation
-- System design explanations
-- Performance analysis
+The complexity $O(n^3)$ indicates that optimization is required for large datasets.
 
 ---
 
-## Custom Styling with Marp
+# Dark Mode Slide
 
-- Custom theme via `<style>`
-- Page numbers using `paginate: true`
-- Footer for contact/email
+This slide uses the `_backgroundColor` and `_color` **directives** locally to inverse the colors just for this specific page.
 
-Example directive:
+* Useful for code deep-dives.
+* Reduces eye strain during long presentations.
 
-```yaml
-paginate: true
-footer: 22f1001255@ds.study.iitm.ac.in
+```python
+def generate_docs():
+    print("Building documentation...")
+    return True
+````
 
----
+-----
+
+# Visual Layouts
+
+This slide uses the **Background Image directive** (`bg right:40%`) to split the slide.
+
+1.  **Text:** Remains on the left.
+2.  **Image:** Automatically fills the right 40%.
+3.  **Responsiveness:** Marp handles the scaling.
+
+Perfect for showing product screenshots alongside descriptive text.
+
+-----
+
+# Thank You
+
+**Contact Information**
+22f1001255@ds.study.iitm.ac.in
+
+*Documentation Source hosted on GitHub*
+
+```
+
+### Directives Used in This File
+
+1.  **``**: Used on the title slide to invert the colors (dark background, light text) specifically for that slide.
+2.  **``**: Used on the title slide to hide the page number (slide 1).
+3.  **``**: Added on the second slide to apply a footer to that slide and all subsequent slides.
+4.  **``**: Used to manually override the background color for the "Dark Mode Slide".
+5.  **`![bg right:40%](...)`**: A specialized image directive that sets the image as a background and splits the layout.
+```
