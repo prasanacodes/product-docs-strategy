@@ -51,10 +51,10 @@ footer {
 
 ---
 
-<!-- THIS IS A VALID BACKGROUND IMAGE SLIDE -->
 ---
 backgroundImage: "https://images.unsplash.com/photo-1518770660439-4636190af475"
 backgroundOpacity: 0.3
+![bg]([background.jpg](https://images.unsplash.com/photo-1518770660439-4636190af475))
 ---
 
 # Documentation That Scales
